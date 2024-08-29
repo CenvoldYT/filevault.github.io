@@ -5,10 +5,11 @@
     <link rel="icon" type="image/png" href="https://cenvoldyt.github.io/pictogenie.github.io/img/genie.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PictoGenie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"> 
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
             background-color: #ffffff;
         }
 
@@ -37,16 +38,30 @@
             display: inline;
         }
 
-        .navbar ul li a:hover {
-    color: #000000; /* Changes text color on hover */
-    background-color: #ffffff; /* Changes background color on hover */
-    border-radius: 5px; /* Adds a slight rounding to the background */
-    padding: 5px; /* Adds padding around the link */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
+        .navbar ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            position: relative;
+        }
 
         .navbar ul li a:hover {
-            
+            color: #ffffff;
+        }
+
+        .navbar ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ffffff;
+            bottom: -3px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .navbar ul li a:hover::after {
+            width: 100%;
         }
     </style>
 </head>
