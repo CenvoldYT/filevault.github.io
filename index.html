@@ -37,11 +37,13 @@
             display: inline;
         }
 
-        .navbar ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-        }
+        .navbar ul li a:hover {
+    color: #000000; /* Changes text color on hover */
+    background-color: #ffffff; /* Changes background color on hover */
+    border-radius: 5px; /* Adds a slight rounding to the background */
+    padding: 5px; /* Adds padding around the link */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
 
         .navbar ul li a:hover {
             
